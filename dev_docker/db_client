@@ -1,0 +1,4 @@
+from ubuntu
+
+run apt-get update
+run apt-get install -y postgresql-client-9.3

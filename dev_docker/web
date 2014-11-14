@@ -1,0 +1,11 @@
+from ubuntu:precise
+
+run apt-get update
+run apt-get install -y python-pip python-dev python-setuptools postgresql libpq-dev
+
+
+add . /web
+
+run pip install -r /web/voter_guide/requirements.txt
+
+# sudo docker run -i -t -p 8000 --link pg_test:pg  -v `pwd`/voter_guide/:/web/voter_guide  vote /bin/bash
